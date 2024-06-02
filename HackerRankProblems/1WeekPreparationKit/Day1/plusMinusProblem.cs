@@ -36,9 +36,9 @@ namespace HackerRankProblems._1WeekPreparationKit.Day1
             negative = negative / arr.Count();
             zero = zero / arr.Count();
 
-            Console.WriteLine(postive.ToString("#.######"));
-            Console.WriteLine(negative.ToString("#.######"));
-            Console.WriteLine(zero.ToString("#.######"));
+            Console.WriteLine(string.Format("{0:0.000000}", postive));
+            Console.WriteLine(string.Format("{0:0.000000}", negative));
+            Console.WriteLine(string.Format("{0:0.000000}", zero));
         }
     }
 }
