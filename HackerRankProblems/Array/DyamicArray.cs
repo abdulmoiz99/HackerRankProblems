@@ -2,25 +2,25 @@
 {
     internal class DyamicArray
     {
-        public static void Main(string[] args)
-        {
-            List<List<int>> list = new List<List<int>>();
-            list.Add(new List<int> { 1, 0, 5 });
-            list.Add(new List<int> { 1, 1, 7 });
-            list.Add(new List<int> { 1, 0, 3 });
-            list.Add(new List<int> { 2, 1, 0 });
-            list.Add(new List<int> { 2, 1, 1 });
+        //public static void Main(string[] args)
+        //{
+        //    List<List<int>> list = new List<List<int>>();
+        //    list.Add(new List<int> { 1, 0, 5 });
+        //    list.Add(new List<int> { 1, 1, 7 });
+        //    list.Add(new List<int> { 1, 0, 3 });
+        //    list.Add(new List<int> { 2, 1, 0 });
+        //    list.Add(new List<int> { 2, 1, 1 });
 
 
-            var list1 = dynamicArray(2, list);
+        //    var list1 = dynamicArray(2, list);
 
 
-            foreach (var item in list1)
-            {
-                Console.WriteLine(item);
-            }
+        //    foreach (var item in list1)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
 
-        }
+        //}
         public static List<int> dynamicArray(int n, List<List<int>> queries)
         {
             List<List<int>> seqList = new List<List<int>>();
