@@ -4,14 +4,14 @@ namespace HackerRankProblems._1WeekPreparationKit.Day1
 {
     internal class plusMinusProblem
     {
-        public static void Main(string[] args)
-        {
-            int n = Convert.ToInt32(Console.ReadLine().Trim());
+    //    public static void Main(string[] args)
+    //    {
+    //        int n = Convert.ToInt32(Console.ReadLine().Trim());
 
-            List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+    //        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
 
-            Result.plusMinus(arr);
-        }
+    //        Result.plusMinus(arr);
+    //    }
     }
     class Result
     {

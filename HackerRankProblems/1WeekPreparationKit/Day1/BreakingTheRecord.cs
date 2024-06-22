@@ -2,21 +2,21 @@
 {
     internal class BreakingTheRecord
     {
-        public static void Main(string[] args)
-        {
-            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+        //public static void Main(string[] args)
+        //{
+        //    TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-            int n = Convert.ToInt32(Console.ReadLine().Trim());
+        //    int n = Convert.ToInt32(Console.ReadLine().Trim());
 
-            List<int> scores = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(scoresTemp => Convert.ToInt32(scoresTemp)).ToList();
+        //    List<int> scores = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(scoresTemp => Convert.ToInt32(scoresTemp)).ToList();
 
-            List<int> result = Result.breakingRecords(scores);
+        //    List<int> result = Result.breakingRecords(scores);
 
-            textWriter.WriteLine(String.Join(" ", result));
+        //    textWriter.WriteLine(String.Join(" ", result));
 
-            textWriter.Flush();
-            textWriter.Close();
-        }
+        //    textWriter.Flush();
+        //    textWriter.Close();
+        //}
         class Result
         {
 

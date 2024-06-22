@@ -21,20 +21,20 @@
             }
             return a;
         }
-        public static void Main(string[] args)
-        {
-            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+        //public static void Main(string[] args)
+        //{
+        //    TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-            int arrCount = Convert.ToInt32(Console.ReadLine().Trim());
+        //    int arrCount = Convert.ToInt32(Console.ReadLine().Trim());
 
-            List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+        //    List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
 
-            List<int> res = reverseArray(arr);
+        //    List<int> res = reverseArray(arr);
 
-            textWriter.WriteLine(String.Join(" ", res));
+        //    textWriter.WriteLine(String.Join(" ", res));
 
-            textWriter.Flush();
-            textWriter.Close();
-        }
+        //    textWriter.Flush();
+        //    textWriter.Close();
+        //}
     }
 }

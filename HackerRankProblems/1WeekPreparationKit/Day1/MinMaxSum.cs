@@ -3,13 +3,13 @@ namespace HackerRankProblems._1WeekPreparationKit.Day1
 {
     internal class MinMaxSum
     {
-        public static void Main(string[] args)
-        {
+        //public static void Main(string[] args)
+        //{
 
-            List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+        //    List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
 
-            MinMaxSumResult.miniMaxSum(arr);
-        }
+        //    MinMaxSumResult.miniMaxSum(arr);
+        //}
     }
     public class MinMaxSumResult
     {
