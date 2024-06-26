@@ -4,10 +4,6 @@ namespace HackerRankProblems.Array.Stack
 {
     internal class MaximumElement
     {
-        public static void Main(string[] args)
-        {
-            
-        }
         public static List<int> getMax(List<string> operations)
         {
             List<int> list = new List<int>();
