@@ -8,14 +8,14 @@ namespace HackerRankProblems.Array.Stack
 {
     internal class LargestRectange
     {
-        public static void Main()
-        {
-            //List<int> ints = new List<int> { 1, 2, 3, 4, 5 };
-            //Console.WriteLine(largestRectangle(ints));
+        //public static void Main()
+        //{
+        //    //List<int> ints = new List<int> { 1, 2, 3, 4, 5 };
+        //    //Console.WriteLine(largestRectangle(ints));
 
-            List<int> int1 = new List<int> { 11, 11, 10, 10, 10 };
-            Console.WriteLine(largestRectangle(int1));
-        }
+        //    List<int> int1 = new List<int> { 11, 11, 10, 10, 10 };
+        //    Console.WriteLine(largestRectangle(int1));
+        //}
         public static long largestRectangle(List<int> h)
         {
             long maxRectange = long.MinValue;
