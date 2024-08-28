@@ -1,28 +1,28 @@
 class QueueUsingTwoStack
 {
-    static void Main(String[] args)
-    {
-        int queueSize = int.Parse(Console.ReadLine());
-        Queue queue = new Queue(queueSize);
-        for (int i = 0; i < queueSize; i++)
-        {
-            string input = Console.ReadLine();
-            string[] inputs = input.Split(" ");
-            if (inputs[0].ToString() == "1")
-            {
-                queue.enqueue(int.Parse(inputs[1].ToString()));
-            }
-            else if (inputs[0].ToString() == "2")
-            {
-                queue.dequeue();
-            }
-            else
-            {
-                System.Console.WriteLine(queue.peek());
-            }
-        }
+    // static void Main(String[] args)
+    // {
+    //     int queueSize = int.Parse(Console.ReadLine());
+    //     Queue queue = new Queue(queueSize);
+    //     for (int i = 0; i < queueSize; i++)
+    //     {
+    //         string input = Console.ReadLine();
+    //         string[] inputs = input.Split(" ");
+    //         if (inputs[0].ToString() == "1")
+    //         {
+    //             queue.enqueue(int.Parse(inputs[1].ToString()));
+    //         }
+    //         else if (inputs[0].ToString() == "2")
+    //         {
+    //             queue.dequeue();
+    //         }
+    //         else
+    //         {
+    //             System.Console.WriteLine(queue.peek());
+    //         }
+    //     }
 
-    }
+    // }
 }
 class Queue
 {
