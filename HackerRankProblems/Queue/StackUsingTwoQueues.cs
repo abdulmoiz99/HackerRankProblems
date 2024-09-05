@@ -1,17 +1,17 @@
 public class StackUsingTwoQueues
 {
-    public static void Main(string[] args)
-    {
-        var solution = new Solution();
-        solution.push(1);
-        solution.push(2);
-        solution.push(3);
+    // public static void Main(string[] args)
+    // {
+    //     var solution = new Solution();
+    //     solution.push(1);
+    //     solution.push(2);
+    //     solution.push(3);
 
-        System.Console.WriteLine(solution.pop());
-        System.Console.WriteLine(solution.pop());
-        System.Console.WriteLine(solution.pop());
-        System.Console.WriteLine(solution.pop());
-    }
+    //     System.Console.WriteLine(solution.pop());
+    //     System.Console.WriteLine(solution.pop());
+    //     System.Console.WriteLine(solution.pop());
+    //     System.Console.WriteLine(solution.pop());
+    // }
 }
 class Solution
 {
