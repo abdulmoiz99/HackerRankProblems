@@ -46,3 +46,42 @@ class Queue
         return queue[front++];
     }
 }
+class StackQueue
+{
+  private Stack<int> s1;
+  private Stack<int> s2;
+
+  public StackQueue(){
+      s1 = new Stack<int>();
+      s2 = new Stack<int>();
+  }
+  public void push(int x)
+    {
+       if(s1.Count == 0){
+           s1.Push(x);
+       }
+       else {
+           while(s1.Count != 0){
+               s2.Push(s1.Pop());
+           }
+           s1.Push(x);
+          
+
+        while(s2.Count != 0){
+               s1.Push(s2.Pop());
+           }
+            
+       }
+     
+    }
+
+    public int pop()
+    {
+         if(s1.Count == 0){
+            return -1;
+          }
+          else {
+              return s1.Pop();
+          }
+    }
+}
