@@ -15,10 +15,10 @@ public class HappyNumber {
             sum += square;
         }
       }
-      if(sum == 1) return true;
-        sum += Convert.ToInt32(Math.Pow(Convert.ToDouble(numbers[i]), 2));
-      numbers = NumbersIn(sum);
-      sum =0;
+      //if(sum == 1) return true;
+      //  sum += Convert.ToInt32(Math.Pow(Convert.ToDouble(numbers[i]), 2));
+      //numbers = NumbersIn(sum);
+      //sum =0;
     }
 
     return false;
