@@ -35,3 +35,4 @@ class PrintFirstNegativeInteger
         }
         return 0; // Return 0 if no negative number is found
     }
+}
