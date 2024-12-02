@@ -1,4 +1,6 @@
-﻿namespace HackerRankProblems.HashTable
+﻿using System.Text;
+
+namespace HackerRankProblems.HashTable
 {
     internal class MorseCode
     {
