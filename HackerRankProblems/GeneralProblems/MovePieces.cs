@@ -3,12 +3,12 @@
     internal class MovePieces
     {
         static int leftPointer, rightPointer;
-        public static void Main(string[] args)
-        {
-            string start = "_R";
-            string target = "R_";
-            Console.WriteLine(CanChange(start, target));
-        }
+        //public static void Main(string[] args)
+        //{
+        //    string start = "_R";
+        //    string target = "R_";
+        //    Console.WriteLine(CanChange(start, target));
+        //}
 
         public static bool CanChange(string start, string target)
         {
