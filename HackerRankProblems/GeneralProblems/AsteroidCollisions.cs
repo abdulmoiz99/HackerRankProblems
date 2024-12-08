@@ -3,11 +3,11 @@ namespace HackerRankProblems.GeneralProblems
 {
     internal class AsteroidCollisions
     {
-        public static void Main(string[] args)
-        {
-            int[] nums = { -2, -1, 1, 2 };
-            Console.WriteLine(AsteroidCollision(nums));
-        }
+        //public static void Main(string[] args)
+        //{
+        //    int[] nums = { -2, -1, 1, 2 };
+        //    Console.WriteLine(AsteroidCollision(nums));
+        //}
         public int[] AsteroidCollision(int[] asteroids)
         {
             var stack = new Stack<int>();
@@ -41,5 +41,4 @@ namespace HackerRankProblems.GeneralProblems
             return stack.Reverse().ToArray();
         }
     }
-}
 }
