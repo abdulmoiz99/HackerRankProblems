@@ -8,12 +8,12 @@ namespace HackerRankProblems.GeneralProblems
 {
     internal class ValidNumberFromString
     {
-        public static void Main(string[] args)
-        {
+        //public static void Main(string[] args)
+        //{
 
-            string s = "Infinity";
-            Console.WriteLine(IsNumber(s));
-        }
+        //    string s = "Infinity";
+        //    Console.WriteLine(IsNumber(s));
+        //}
         public static bool IsNumber(string s)
         {
             try

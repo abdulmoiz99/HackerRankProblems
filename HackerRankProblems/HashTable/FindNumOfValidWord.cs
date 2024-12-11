@@ -2,10 +2,24 @@
 {
     internal class FindNumOfValidWord
     {
-        public IList<int> FindNumOfValidWords(string[] words, string[] puzzles)
+        //public static void Main(string[] args)
+        //{
+
+        //    string[] words = { "aaaa", "asas", "able", "ability", "actt", "actor", "access" };
+        //    string[] puzzles = { "aboveyz", "abrodyz", "abslute", "absoryz", "actresz", "gaswxyz" };
+        //    Console.WriteLine(FindNumOfValidWords(words, puzzles));
+        //}
+        public static IList<int> FindNumOfValidWords(string[] words, string[] puzzles)
         {
             var list = new List<int>();
-
+            for(int i = 0; i < words.Length; i++)
+            {
+                words[i] = CreateBitMask(words[i]);
+            }
+            for (int i = 0; i < puzzles.Length; i++)
+            {
+                puzzles[i] = CreateBitMask(puzzles[i]);
+            }
             foreach (var puzzle in puzzles)
             {
                 int count = 0;
@@ -30,17 +44,23 @@
             }
             return list;
         }
-
-        public bool IsMatch(string puzzle, string word)
+        static string CreateBitMask(string input)
         {
-            var set = new HashSet<char>(puzzle);
-            foreach (var letter in word)
+            int mask = 0;
+
+            foreach (char c in input)
             {
-                if (!set.Contains(letter)) return false;
+                if (c >= 'a' && c <= 'z')
+                {
+                    int bitPosition = c - 'a';  
+                    mask |= (1 << bitPosition); 
+                }
             }
-            return true;
+
+            return Convert.ToString(mask, 2).PadRight(26, '0');  
         }
-        public bool Contains(string word, char letter)
+
+        public static bool Contains(string word, char letter)
         {
             var set = new HashSet<char>(word);
 
