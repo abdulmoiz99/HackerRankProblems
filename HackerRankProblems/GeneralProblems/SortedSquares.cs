@@ -1,29 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HackerRankProblems.GeneralProblems
+﻿namespace HackerRankProblems.GeneralProblems
 {
     internal class SortedSquares
     {
-    //    public static void Main(string[] args)
-    //    {
-    //        int[] array = { -4, -1, 0, 3, 10 };
+        public int[] SortedSquare(int[] nums)
+        {
+            int n = nums.Length;
+            int left = 0, right = n - 1;
+            var sorted = new int[n];
+            for (int i = n - 1; i >= 0; i--)
+            {
+                if (Math.Abs(nums[left]) > Math.Abs(nums[right]))
+                {
+                    sorted[i] = nums[left] * nums[left];
+                    left++;
+                }
+                else
+                {
+                    sorted[i] = nums[right] * nums[right];
+                    right--;
+                }
 
-    //        int i = 0, j = array.Length - 1;
-
-    //        while (j >= 0)
-    //        {
-    //            if (Math.Abs(array[i]) > Math.Abs(array[j]))
-    //            {
-    //                (array[i], array[j]) = (array[j], array[i]);
-    //            }
-    //            j--;
-    //        }
-    //        Console.WriteLine();
-
-    //    }
+            }
+            return sorted;
+        }
     }
 }
