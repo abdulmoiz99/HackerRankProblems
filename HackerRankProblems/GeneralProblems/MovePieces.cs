@@ -2,86 +2,65 @@
 {
     internal class MovePieces
     {
-
-        public static void Main(string[] args)
-        {
-            string start = "_L__R__R_";
-            string target = "L______RR";
-            Console.WriteLine(CanChange(start, target));
-        }
+        static int leftPointer, rightPointer;
+        //public static void Main(string[] args)
+        //{
+        //    string start = "_R";
+        //    string target = "R_";
+        //    Console.WriteLine(CanChange(start, target));
+        //}
 
         public static bool CanChange(string start, string target)
         {
             if (start.Length != target.Length) return false;
 
-            (int sLeft, int sRight) = CountLR(start);
-            (int tLeft, int tRight) = CountLR(target);
+            leftPointer = 0;
+            rightPointer = start.Length - 1;
 
-            if (sLeft != tLeft && sRight != tRight) return false;
-
-
-            char[] str1 = start.ToCharArray();
-            int lastLeftIndex = -1;
-            for (int i = 0; i < start.Length; i++)
+            foreach (var c in target)
             {
-                var value = new string(str1);
-                if (value.Equals(target))
-                    return true;
-
-                if (str1[i] != target[i])
+                if (c == 'L' && !HasValidLeft(start))
                 {
-                    if (str1[i] == '_' && target[i] == 'L')
-                    {
-                        int index = GetLeftIndex(i, start, lastLeftIndex);
-                        if (index == -1) return false;
-                        lastLeftIndex = index;
-                        (str1[index], str1[i]) = (str1[i], str1[index]);
-                    }
-                    if (str1[i] == 'R' && target[i] == '_')
-                    {
-                        int index = GetRightIndex(i, start);
-                        if (index == -1) return false;
-
-                        (str1[index], str1[i]) = (str1[i], str1[index]);
-                    }
+                    return false;
                 }
+                else if (c == 'R' && !HasValidRight(start))
+                {
+                    return false;
+                }
+            }
+            return true;
 
+        }
+        public static bool HasValidLeft(string value)
+        {
+            while (leftPointer < rightPointer)
+            {
+                if (value[leftPointer] == 'R') return false;
+
+                else if (value[leftPointer] == 'L')
+                {
+                    leftPointer++;
+                    return true;
+                }
+                leftPointer++;
             }
             return false;
         }
-        public static int GetLeftIndex(int startIndex, string start, int lastLeftIndex)
-        {
-            if (lastLeftIndex != -1) startIndex = lastLeftIndex;
 
-            for (int i = startIndex; i < start.Length; i++)
-            {
-                if (start[i] == 'R') return -1;
-                else if (start[i] == 'L') return i;
-            }
-            return -1;
-        }
-        public static int GetRightIndex(int startIndex, string start)
+        public static bool HasValidRight(string value)
         {
-            int index = startIndex;
-            for (int i = startIndex; i < start.Length; i++)
+            while (leftPointer < rightPointer)
             {
-                if (start[i] == 'L')
+                if (value[rightPointer] == 'L') return false;
+
+                else if (value[rightPointer] == 'R' && rightPointer - 1 > 0 && value[rightPointer - 1] == '_')
                 {
-                    return startIndex == i ? -1 : i;
+                    rightPointer--;
+                    return true;
                 }
-                index++;
+                rightPointer--;
             }
-            return index - 1;
-        }
-        public static (int, int) CountLR(string value)
-        {
-            int left = 0; int right = 0;
-            foreach (var c in value)
-            {
-                if (c == 'L') left++;
-                else if (c == 'R') right++;
-            }
-            return (left, right);
+            return false;
         }
     }
 }
