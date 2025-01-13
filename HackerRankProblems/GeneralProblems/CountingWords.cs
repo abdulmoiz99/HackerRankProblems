@@ -12,7 +12,6 @@
                 {
                     count++;
                 }
-                *
             }
             return count;
         }
