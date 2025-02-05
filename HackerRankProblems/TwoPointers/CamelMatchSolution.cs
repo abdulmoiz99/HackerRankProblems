@@ -7,7 +7,7 @@
         //    var query = "ControlPanel";
         //    var pattern = "CooP";
         //    Console.WriteLine(IsMatch(query, pattern));
-        }
+        //}
         public static bool IsMatch(string query, string pattern)
         {
             int i = 0, j = 0;
