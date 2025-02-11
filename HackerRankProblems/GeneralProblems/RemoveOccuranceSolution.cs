@@ -1,4 +1,6 @@
-﻿namespace HackerRankProblems.GeneralProblems
+﻿using System.Text;
+
+namespace HackerRankProblems.GeneralProblems
 {
     internal class RemoveOccuranceSolution
     {
@@ -11,33 +13,18 @@
         //}
         public static string RemoveOccurrences(string s, string part)
         {
-            int i = 0, j = 0;
-            int length = part.Length;
-            while (i < s.Length)
+            var sb = new StringBuilder();
+            foreach (var c in s)
             {
-                if (s[i] == part[j])
+                sb.Append(c);
+                int length = part.Length;
+                if(sb.Length >= part.Length && sb.ToString(sb.Length - length, length) == part)
                 {
-                    int start = i;
-                    while (start < s.Length && j < part.Length && s[start] == part[j])
-                    {
-                        start++; j++;
-                    }
-
-                    if (j == length)
-                    {
-                        s = s.Remove(i, j);
-                        i = 0;
-                    }
-                    else
-                    {
-                        i++;
-                    }
-                    j = 0;
-
+                    sb.Remove(sb.Length - length, length);
                 }
-                else i++;
             }
-            return s;
+            return sb.ToString();
+
         }
     }
 }
